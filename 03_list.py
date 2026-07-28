@@ -46,7 +46,7 @@ print(lista1[:]) # [1, 2, 3, 4, 5]
 # HAY MAS MAGIA 
 lista1 = [1, 2, 3, 4, 5, 6, 7, 8] 
 print(lista1[::2]) # [1, 3, 5, 7]
-print(lista1[::-1]) # Para devolver indices inversos 
+print(lista1[::-1]) # Para devolver indices inversos lista[inicio:fin:paso]
 
 # Modificar una lista 
 lista1[0] = 20
@@ -61,6 +61,10 @@ print(lista1)
 # Forma mas corta y eficiente
 lista1 += [7, 8, 9]
 print(lista1)
+
+# Recuperar longitud de una lista 
+print("longitud de la lista", len(lista1))
+
 
 ###
 # EJERCICIOS
@@ -132,7 +136,25 @@ print(lista[2:3])
 # Ejemplo: lista = [1, 2, 3, 4, 5, 6] -> Resultado: [3, 2, 1, 4, 5, 6]
 print("\n Ejercici 6")
 lista = [1, 2, 3, 4, 5, 6]
-# print(lista[3:])
-# print(lista[2::-1])
+# print(lista[3:]) practica para que el dato diera [4, 5, 6]
+# print(lista[2::-1]) practica para que el valor se invirtiera y quedara [3, 2, 1]
 lista_nueva = lista[2::-1] + lista[3:]
 print(lista_nueva)
+
+# Explicación 6:
+# lista[2::-1]
+# - Empieza en el índice 2 (el número 3).
+# - Como el paso es -1, recorre la lista hacia atrás.
+# - Al no especificar un índice final, llega hasta el inicio de la lista.
+# - El resultado es: [3, 2, 1]
+#
+# lista[3:]
+# - Empieza en el índice 3 (el número 4).
+# - Al no indicar un índice final, toma todos los elementos hasta el final.
+# - El resultado es: [4, 5, 6]
+#
+# Finalmente, se utiliza el operador + para concatenar ambas listas:
+# [3, 2, 1] + [4, 5, 6]
+#
+# Resultado final:
+# [3, 2, 1, 4, 5, 6]
